@@ -1,17 +1,17 @@
 const getVideos = (req, res) => {
-  const name = req.params.get("name");
+  const name = req.params.name;
 
   if (name) {
-    req.json({ message: `Your name is ${name}` });
+    return res.json({ message: `Your name is ${name}` });
   } else {
-    return handleErr({ status: 400, message: "Please specify a name" })
+    return res.status(400).json({
+      message: "Please specify a name",
+    });
   }
-}
+};
 
 const controller = {
   getVideos,
 };
 
-
-
-module.exports = controller
+module.exports = controller;

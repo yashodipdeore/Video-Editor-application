@@ -19,5 +19,9 @@ module.exports = (server) => {
   // Update a user info
   server.route("put", "/api/user", User.updateUser);
 
-  server.route('get', '/api/videos', Video.getVideos);
+
+  //===============================
+  //-------- Video Route ---------
+  //==============================
+  server.route('get', '/api/videos-temp', Video.getVideos);
 };
