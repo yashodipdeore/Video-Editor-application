@@ -35,6 +35,7 @@ server.handleErr((error, req, res) => {
   }
 });
 
+
 server.listen(PORT, () => {
-  console.log(`Server has started on port ${PORT}`);
+  console.log('server is running at : http://localhost:' + PORT);
 });
